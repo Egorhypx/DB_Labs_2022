@@ -65,7 +65,7 @@ JOIN promocodes ON applied_promocodes.promocode_id=promocodes.id
 SELECT id,name,"Size"=
 CASE
 WHEN weight < 600 THEN 'Small'
-WHEN price >= 600 and price < 800 THEN 'Mediocre'
+WHEN weight >= 600 and weight < 800 THEN 'Mediocre'
 ELSE 'Big'
 END
 FROM meals
