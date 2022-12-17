@@ -15,6 +15,7 @@ UNION SELECT code FROM promocodes
 
 SELECT meals.name AS meal,meal_images.url FROM meals
 CROSS JOIN meal_images
+WHERE meal_images.meal_id = meals.id
 
 SELECT users.firstname,users.lastname,adress.city,adress.street,adress.building,roles.role,baskets.quantity
 FROM users
