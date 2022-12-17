@@ -32,7 +32,7 @@ SELECT * FROM orders
 WHERE total_price>21.99 AND total_discount<21.99
 
 SELECT name,
-(price*weight) AS sum_for_gr
+(price/weight) AS sum_for_gr
 FROM meals
 ORDER BY sum_for_gr
 
