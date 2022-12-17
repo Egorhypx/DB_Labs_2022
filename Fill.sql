@@ -30,9 +30,9 @@ INSERT INTO orders(creation_date,created_at,desired_at,comment,total_price,total
 INSERT INTO orders(creation_date,created_at,desired_at,comment,total_price,total_discount,user_id) VALUES('2022-12-1','1:12','1:42','Not bad, but i dont think ill use it again.',53.98,0,5)
 INSERT INTO orders(creation_date,created_at,desired_at,comment,total_price,total_discount,user_id) VALUES('2022-12-2','21:22','22:00','',41.99,21.99,3)
 
-INSERT INTO promocodes(code,discount,description,valid_from,valid_until) VALUES('QWER-ASWQ-ASDA',10.0,'Have a good november with us',2022-11-1,2022-11-30)
-INSERT INTO promocodes(code,discount,description,valid_from,valid_until) VALUES('SADF-GHJKJ-DASA',21.99,'Only tree days you can have a huge discount. Hurry up.',2022-12-1,2022-12-3)
-INSERT INTO promocodes(code,discount,description,valid_from,valid_until) VALUES('LKJK-HXZG-OUDD',30.99,'Your chance to get food for free. Have fun.',2022-12-7,2022-12-8)
+INSERT INTO promocodes(code,discount,description,valid_from,valid_until) VALUES('QWER-ASWQ-ASDA',10.0,'Have a good november with us','2022-11-1','2022-11-30')
+INSERT INTO promocodes(code,discount,description,valid_from,valid_until) VALUES('SADF-GHJKJ-DASA',21.99,'Only tree days you can have a huge discount. Hurry up.','2022-12-1','2022-12-3')
+INSERT INTO promocodes(code,discount,description,valid_from,valid_until) VALUES('LKJK-HXZG-OUDD',30.99,'Your chance to get food for free. Have fun.','2022-12-7','2022-12-8')
 
 INSERT INTO applied_promocodes(order_id,promocode_id) VALUES(2,1)
 INSERT INTO applied_promocodes(order_id,promocode_id) VALUES(3,1)
