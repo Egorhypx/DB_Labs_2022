@@ -21,18 +21,18 @@ GO
 
 CREATE PROCEDURE meals_summary AS
 BEGIN
-SELECT name,description,ingredients,weight,price,
-(SELECT url FROM meal_images WHERE meal_id = meals.id) AS image_url
-FROM meals
+	SELECT name,description,ingredients,weight,price,
+	(SELECT url FROM meal_images WHERE meal_id = meals.id) AS image_url
+	FROM meals
 END;
 
 GO
 
 CREATE PROCEDURE users_summary AS
 BEGIN
-SELECT firstname,lastname,password,mail,phone,
-(SELECT role FROM roles WHERE role_id = roles.id) AS role
-FROM users
+	SELECT firstname,lastname,password,mail,phone,
+	(SELECT role FROM roles WHERE role_id = roles.id) AS role
+	FROM users
 END;
 
 GO
