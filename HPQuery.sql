@@ -5,7 +5,7 @@ LEFT JOIN users ON orders.user_id = users.id
 LEFT JOIN roles ON users.role_id=roles.id
 WHERE total_price > (SELECT AVG(total_price) FROM orders)
 
-SELECT firstname,lastname,mail,COUNT(*) AS orders_count FROM orders
+SELECT mail,COUNT(*) AS orders_count FROM orders
 LEFT JOIN users ON orders.user_id=users.id
 GROUP BY mail
 HAVING COUNT(*)>1
