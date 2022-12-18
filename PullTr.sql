@@ -7,7 +7,7 @@ ON orders
 AFTER INSERT
 AS
 INSERT INTO logs(user_id,message)
-SELECT user_id, 'User created an order' + (SELECT firstname,lastname,mail,phone FROM users WHERE user_id=users.id)
+SELECT user_id, 'User created an order' + (SELECT lastname FROM users WHERE user_id=users.id)
 FROM INSERTED
 
 GO
@@ -17,7 +17,7 @@ ON orders
 AFTER DELETE
 AS
 INSERT INTO logs(user_id,message)
-SELECT user_id, 'Order was cancelled' + (SELECT firstname,lastname,mail,phone FROM users WHERE user_id=users.id)
+SELECT user_id, 'Order was cancelled' + (SELECT lastname FROM users WHERE user_id=users.id)
 FROM INSERTED
 
 GO
@@ -37,7 +37,7 @@ ON users
 AFTER INSERT
 AS
 INSERT INTO logs(user_id,message)
-SELECT id, 'User was created' + firstname,lastname,mail,phone
+SELECT id, 'User was created' + mail
 FROM INSERTED
 
 GO
