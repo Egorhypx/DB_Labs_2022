@@ -118,7 +118,7 @@ CREATE PROCEDURE delete_promocode
 AS
 BEGIN
 	DELETE promocodes
-	WHERE valid_from<2022-01-01 AND valid_until<2022-01-02
+	WHERE valid_from<'2022-01-01' AND valid_until<'2022-01-02'
 END;
 
 GO
